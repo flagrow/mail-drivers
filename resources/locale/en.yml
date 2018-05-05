@@ -1,0 +1,47 @@
+flagrow-mail-drivers:
+    admin:
+        settings:
+            title: Mail Services Settings
+
+            introduction: >
+                Clicking "set the mail driver to ..." will update your current "driver" setting from the Email tab.
+                You can go back to the SMTP driver by setting "driver" to "smtp" in the Email tab of the admin panel.
+                Disabling this extension won't automatically switch you back to SMTP !
+
+            field:
+                sender: Sender email address
+                sender-help: >
+                    This field is just for convenience and is synced with the same field from the Email tab.
+                    Make sure this email address is allowed to send messages via the driver you're using.
+                mailgunSecret: => flagrow-mail-drivers.ref.secret
+                mailgunDomain: => flagrow-mail-drivers.ref.domain
+                mandrillSecret: => flagrow-mail-drivers.ref.secret
+                sesKey: => flagrow-mail-drivers.ref.key
+                sesSecret: => flagrow-mail-drivers.ref.secret
+                sesRegion: => flagrow-mail-drivers.ref.region
+
+            placeholder:
+                mailgunSecret: key-0123456789abcdef0123456789abcdef
+                mailgunDomain: example.com
+                mandrillSecret: 0123456789abcdefABCDEF
+                sesKey: ABCDEFGHIJ0123456789
+                sesSecret: 0123456789abcdefghijABCDEFGHIJ0123456789
+                sesRegion: us-east-1
+
+            driver:
+                mailgun: Mailgun
+                mandrill: Mandrill
+                ses: Amazon SES
+
+            state:
+                enable: Flarum is currently not using this driver. Set the mail driver to "{driver}" ?
+                enabled: Flarum is currently using the "{driver}" driver
+
+        error:
+            missingAmazonSdk: You need to install the Amazon Sdk before enabling the SES driver (composer require aws/aws-sdk-php:~3.0)
+
+    ref:
+        secret: Secret
+        domain: Domain
+        key: Key
+        region: Region

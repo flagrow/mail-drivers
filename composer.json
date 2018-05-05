@@ -1,0 +1,45 @@
+{
+    "name": "flagrow/mail-drivers",
+    "description": "Send email via Mailgun, Mandrill or SES api",
+    "keywords": [
+        "extension",
+        "flarum",
+        "mailgun",
+        "mandrill",
+        "ses"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clark Winkelmann",
+            "email": "clark.winkelmann@gmail.com",
+            "homepage": "https://clarkwinkelmann.com/"
+        }
+    ],
+    "require": {
+        "flarum/core": "^0.1.0-beta.7",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "suggest": {
+        "aws/aws-sdk-php": "Required to use the SES mail driver (~3.0)."
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Flagrow Mail Drivers",
+            "icon": {
+                "name": "envelope",
+                "backgroundColor": "#f4f4f4",
+                "color": "#5f4bb6"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://discuss.flarum.org/d/11800-flagrow-mail-drivers-send-email-via-mailgun-mandrill-or-ses-api"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Flagrow\\MailDrivers\\": "src/"
+        }
+    }
+}
