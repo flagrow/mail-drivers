@@ -2,7 +2,7 @@
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/flagrow/mail-drivers/blob/master/LICENSE.md) [![Latest Stable Version](https://img.shields.io/packagist/v/flagrow/mail-drivers.svg)](https://packagist.org/packages/flagrow/mail-drivers) [![Total Downloads](https://img.shields.io/packagist/dt/flagrow/mail-drivers.svg)](https://packagist.org/packages/flagrow/mail-drivers) [![Join our Discord server](https://discordapp.com/api/guilds/240489109041315840/embed.png)](https://flagrow.io/join-discord)
 
-This extension lets you use other mail drivers already included with Flarum but which had no way to be configured by the forum owner.
+This extension lets you use other mail drivers already included with the library Flarum uses for mail but which had no way to be configured by the forum owner.
 
 The drivers are **Mailgun**, **Mandrill** and **Amazon SES**.
 
