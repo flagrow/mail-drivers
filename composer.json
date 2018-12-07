@@ -18,7 +18,7 @@
         }
     ],
     "require": {
-        "flarum/core": "^0.1.0-beta.7",
+        "flarum/core": "^0.1.0-beta.8",
         "guzzlehttp/guzzle": "~6.0"
     },
     "suggest": {
@@ -28,13 +28,13 @@
         "flarum-extension": {
             "title": "Flagrow Mail Drivers",
             "icon": {
-                "name": "envelope",
+                "name": "fas fa-envelope",
                 "backgroundColor": "#f4f4f4",
                 "color": "#5f4bb6"
             }
         },
         "flagrow": {
-            "discuss": "https://discuss.flarum.org/d/11800-flagrow-mail-drivers-send-email-via-mailgun-mandrill-or-ses-api"
+            "discuss": "https://discuss.flarum.org/d/11800"
         }
     },
     "autoload": {

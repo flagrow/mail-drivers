@@ -3,19 +3,19 @@
 namespace Flagrow\MailDrivers\Listeners;
 
 use Aws\Ses\SesClient;
-use Flarum\Core\Exception\ValidationException;
-use Flarum\Event\PrepareSerializedSetting;
+use Flarum\Foundation\ValidationException;
 use Flarum\Locale\LocaleManager;
+use Flarum\Settings\Event\Serializing;
 use Illuminate\Contracts\Events\Dispatcher;
 
 class PreventEnablingSesWithoutAmazonSdk
 {
     public function subscribe(Dispatcher $events)
     {
-        $events->listen(PrepareSerializedSetting::class, [$this, 'beforeSaving']);
+        $events->listen(Serializing::class, [$this, 'beforeSaving']);
     }
 
-    public function beforeSaving(PrepareSerializedSetting $event)
+    public function beforeSaving(Serializing $event)
     {
         if ($event->key === 'mail_driver' && $event->value === 'ses' && !class_exists(SesClient::class)) {
             /**
